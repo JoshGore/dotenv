@@ -63,3 +63,10 @@ then
     vim -c 'PlugClean' -c 'qa!'
     vim -c 'PlugInstall' -c 'qa!'
 fi
+
+read -p "Install LastPass? "
+if [ $USER_INPUT = "y" ] || [ $USER_INPUT = "Y" ]
+then
+    chmod +x lastpass.sh
+    ./lastpass.sh
+fi
