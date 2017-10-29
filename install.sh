@@ -11,10 +11,10 @@ read -p "Link Files? " USER_INPUT
 if [ $USER_INPUT = "y" ] || [ $USER_INPUT = "Y" ]
 then
     cd ~
-    ln -s .dotfiles/.vim  .vim
-    ln -s .dotfiles/.vim/.vimrc  .vimrc
-    ln -s .dotfiles/.zshrc  .zshrc
-    ln -s .dotfiles/.oh-my-zsh  .oh-my-zsh
+    ln -s .env/.vim  .vim
+    ln -s .env/.vim/.vimrc  .vimrc
+    ln -s .env/.zshrc  .zshrc
+    ln -s .env/.oh-my-zsh  .oh-my-zsh
 fi
 
 read -p "Change Shell? " USER_INPUT
