@@ -1,6 +1,7 @@
 #!/bin/bash
 read -p "If I forgot to add the recursive flags run this: " USER_INPUT
 if [ $USER_INPUT = "y" ] || [ $USER_INPUT = "Y" ]
+then
     git submodule update --init --recursive
 fi
 read -p "Reset Config?" USER_INPUT
