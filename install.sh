@@ -58,14 +58,14 @@ then
     sudo apt-get install python-dev python3-dev
 fi 
 
-read -p "Install Plugins? "
+read -p "Install Plugins? " USER_INPUT
 if [ $USER_INPUT = "y" ] || [ $USER_INPUT = "Y" ]
 then
     vim -c 'PlugClean' -c 'qa!'
     vim -c 'PlugInstall' -c 'qa!'
 fi
 
-read -p "Install LastPass? "
+read -p "Install LastPass? " USER_INPUT
 if [ $USER_INPUT = "y" ] || [ $USER_INPUT = "Y" ]
 then
     chmod +x lastpass.sh
