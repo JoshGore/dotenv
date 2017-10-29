@@ -25,7 +25,7 @@ Plug 'tpope/vim-surround'
 " sudo apt-get install python-dev python3-dev
 " cd ~/.vim/bundle/YouCompleteMe
 " ./install.py --all
-Plug 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 
 " Themes
 Plug 'altercation/vim-colors-solarized'

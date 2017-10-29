@@ -1,4 +1,8 @@
 #!/bin/bash
+read -p "If I forgot to add the recursive flags run this: " USER_INPUT
+if [ $USER_INPUT = "y" ] || [ $USER_INPUT = "Y" ]
+    git submodule update --init --recursive
+fi
 read -p "Reset Config?" USER_INPUT
 if [ $USER_INPUT = "y" ] || [ $USER_INPUT = "Y" ]
 then
@@ -43,6 +47,14 @@ then
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
         https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 fi
+
+read -p "Install Prerequsites for youcompleteme?" USER_INPUT
+if [ $USER_INPUT = "y" ] || [ $USER_INPUT = "Y" ]
+then
+    sudo apt-get update
+    sudo apt-get install build-essential cmake
+    sudo apt-get install python-dev python3-dev
+fi 
 
 read -p "Install Plugins? "
 if [ $USER_INPUT = "y" ] || [ $USER_INPUT = "Y" ]
