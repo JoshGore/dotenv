@@ -1,13 +1,22 @@
+#!/bin/bash
 echo "All Files in ~/.ssh"
-ls -al ~/.ssh
-read  -p "Email Address for Key: " EMAIL
-ssh-keygen -t rsa -b 4096 -C "$EMAIL"
-echo "Starting ssh-agent"
-eval $(ssh-agent -s)
+
+read -p "Generate key? " USER_INPUT        
+if [ $USER_INPUT = "y" ] || [ $USER_INPUT = "Y" ]
+then                                             
+    ls -al ~/.ssh
+    read  -p "Email Address for Key: " EMAIL
+    ssh-keygen -t rsa -b 4096 -C "$EMAIL"
+    echo "Starting ssh-agent"
+    eval $(ssh-agent -s)
+fi
+
+KEY_NAME="id_rsa"
 read -p "Enter name of key, or enter for default: " KEY_NAME
-if $KEY_NAME = ""
+echo "the KEY_NAME is \""$KEY_NAME"\""
+if [ "$KEY_NAME" = "" ]
 then 
-    $KEY_NAME = "id_rsa"
+    KEY_NAME="id_rsa"
 fi
 
 ssh-add ~/.ssh/$KEY_NAME
@@ -27,3 +36,4 @@ if [ $USER_INPUT = "y" ] || [ $USER_INPUT = "Y" ]
 then                                             
     ssh -T git@github.com
 fi
+
