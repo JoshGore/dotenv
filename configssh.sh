@@ -37,3 +37,10 @@ then
     ssh -T git@github.com
 fi
 
+read -p "Change config repo to use ssh? " USER_INPUT
+if [ $USER_INPUT = "y" ] || [ $USER_INPUT = "Y" ]
+then
+    git remote -v
+    git remote set-url origin git@github.com:JoshuaGore8/dotenv.git
+    git remote -v
+fi
