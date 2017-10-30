@@ -20,6 +20,7 @@ then
     ln -s .env/.vim/.vimrc  .vimrc
     ln -s .env/.zshrc  .zshrc
     ln -s .env/.oh-my-zsh  .oh-my-zsh
+    cd .env
 fi
 
 read -p "Change Shell? " USER_INPUT
