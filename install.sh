@@ -70,3 +70,13 @@ then
     chmod +x lastpass.sh
     ./lastpass.sh
 fi
+
+read -p "Configure SSH Keys? " USER_INPUT
+if [ $USER_INPUT = "y" ] || [ $USER_INPUT = "Y" ]
+then
+    # echo "All Files in ~/.ssh"
+    # ls -al ~/.ssh
+    chmod +x configssh.sh
+    ./configssh.sh
+fi
+
