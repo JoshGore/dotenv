@@ -26,12 +26,15 @@ Plug 'tpope/vim-surround'
 " cd ~/.vim/bundle/YouCompleteMe
 " ./install.py --all
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " Themes
 Plug 'altercation/vim-colors-solarized'
 
 " Syntax 
 Plug 'plasticboy/vim-markdown'
+Plug 'vim-syntastic/syntastic'
 
 call plug#end()
 " End Vue-Plug
@@ -69,7 +72,19 @@ inoremap <right> <nop>
 set autoread
 set wildmenu
 
-set statusline=%{fugitive#statusline()}
+" set statusline+=%{fugitive#statusline()}
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme = 'solarized'
+let g:airline_solarized_bg = 'dark'
+let g:airline_powerline_fonts = 1
+set laststatus=2
+
 autocmd vimenter * NERDTree
 let g:NERDTreeDirArrowExpandable = '+'
 let g:NERDTreeDirArrowCollapsible = '-'
+
+" autoload on changes to .vimrc
+augroup myvimrchooks
+        au!
+        autocmd bufwritepost .vimrc source ~/.vimrc
+augroup END
