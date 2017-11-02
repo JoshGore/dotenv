@@ -110,8 +110,8 @@ do
             ;;
         14)
             #do stuff
-            echo "installing gnome-terminal"
-            sudo apt-get update && sudo apt-get install gnome-terminal
+            chmod +x dockerinstall.sh
+            ./dockerinstall.sh
             clear
             ;;
         [^q]*)
