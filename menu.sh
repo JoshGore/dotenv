@@ -18,6 +18,7 @@ do
     echo "11.) Install PowerLine Fonts (FontConfig Method) "
     echo "12.) Install PowerLine Fonts (Alternative Method) "
     echo "13.) Install Gnome Terminal? "
+    echo "14.) Install Docker? "
     echo "=================================================="
     read -p "Enter option # (q to quit): " USER_INPUT
     case $USER_INPUT in 
@@ -102,6 +103,12 @@ do
             clear
             ;;
         13)
+            #do stuff
+            echo "installing gnome-terminal"
+            sudo apt-get update && sudo apt-get install gnome-terminal
+            clear
+            ;;
+        14)
             #do stuff
             echo "installing gnome-terminal"
             sudo apt-get update && sudo apt-get install gnome-terminal
