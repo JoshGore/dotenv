@@ -49,6 +49,8 @@ do
             ;;
         4)
             #do stuff
+            echo 'trying to install zsh, in case not installed'
+            sudo apt-get update && sudo apt-get install zsh
             chsh -s $(which zsh)
             clear
             ;;
