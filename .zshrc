@@ -92,6 +92,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # 
+alias voltex="cd /mnt/e/Development/VoltexCertificates/CodeRepo/VoltexCertificates0.1"
 
 PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 PATH="$PATH:/mnt/c/Program\ Files/Docker/Docker/resources/bin"

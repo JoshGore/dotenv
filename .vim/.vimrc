@@ -20,6 +20,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
+Plug 'jiangmiao/auto-pairs'
 " to install You CompleteMe
 " sudo apt-get install build-essential cmake
 " sudo apt-get install python-dev python3-dev
@@ -28,6 +29,8 @@ Plug 'tpope/vim-surround'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'tpope/vim-abolish'
+Plug 'tpope/vim-repeat'
 
 " Themes
 Plug 'altercation/vim-colors-solarized'
@@ -35,6 +38,7 @@ Plug 'altercation/vim-colors-solarized'
 " Syntax 
 Plug 'plasticboy/vim-markdown'
 Plug 'vim-syntastic/syntastic'
+Plug 'posva/vim-vue'
 
 call plug#end()
 " End Vue-Plug
