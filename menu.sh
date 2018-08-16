@@ -126,6 +126,24 @@ do
             chmod +x dockerinstall.sh
             ./dockerinstall.sh
             clear
+            read -p "Add docker host variable to bashrc for WSL?" USER_INPUT_2
+            if [ $USER_INPUT_2 = "y" ] || [ $USER_INPUT_2 = "Y" ]
+            then
+                echo "export DOCKER_HOST=tcp://0.0.0.0:2375" >> ~/.bashrc && source ~/.bashrc
+            fi
+            echo "to modify WSL configuration so drives mount as /c not /mnt/c, as docker expects"
+            echo "sudo nano /etc/wsl.conf"
+            echo "# Now make it look like this and save the file when you're done:"
+            echo "[automount]"
+            echo "root = /"
+            echo "options = \"metadata\""
+            read -p "Do this automatically? (if new installation and doesn't exist) " USER_INPUT_3
+            if [ $USER_INPUT_3 = "y" ] || [ $USER_INPUT_3 = "Y" ]
+            then
+            sudo echo "[automount]" >> /etc/wsl.conf
+            sudo echo "root = /" >> /etc/wsl.conf
+            sudo echo "options = \"metadata\"" >> /etc/wsl.conf
+            fi
             ;;
         [^q]*)
             #exit script
