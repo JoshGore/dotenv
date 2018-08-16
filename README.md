@@ -33,3 +33,5 @@ sudo apt-get update && git clone --recurse-submodules https://github.com/JoshuaG
 * *vimplug and other vim config*
 * *LastPass*
 * *SSH Keys*
+## Handy Links
+https://nickjanetakis.com/blog/setting-up-docker-for-windows-and-wsl-to-work-flawlessly
