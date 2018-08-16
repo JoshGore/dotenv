@@ -4,13 +4,13 @@ my dotenv files
 ## install
 ```
 sudo apt-get update
-git clone --recurse-submodules https://JoshuaGore8/dotenv .env
+git clone --recurse-submodules https://github.com/JoshuaGore8/dotenv .env
 cd .env
 ./install.sh
 ```
 Or in a one-liner
 ```
-sudo apt-get update && git clone --recurse-submodules https://JoshuaGore8/dotenv .env && cd .env && ./install.sh
+sudo apt-get update && git clone --recurse-submodules https://github.com/JoshuaGore8/dotenv .env && cd .env && ./install.sh
 ```
 *options to install*
 * *zsh and config*
