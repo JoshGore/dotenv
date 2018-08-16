@@ -144,9 +144,9 @@ do
             read -p "Do this automatically? (if new installation and doesn't exist) " USER_INPUT_3
             if [ $USER_INPUT_3 = "y" ] || [ $USER_INPUT_3 = "Y" ]
             then
-            sudo echo "[automount]" >> /etc/wsl.conf
-            sudo echo "root = /" >> /etc/wsl.conf
-            sudo echo "options = \"metadata\"" >> /etc/wsl.conf
+                echo "[automount]" | sudo tee -a /etc/wsl.conf
+                echo "root = /" | sudo tee -a /etc/wsl.conf
+                echo "options = \"metadata\"" | sudo tee -a /etc/wsl.conf
             fi
             ;;
         [^q]*)
