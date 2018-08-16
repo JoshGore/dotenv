@@ -1,7 +1,20 @@
 # dotenv
 my dotenv files
 
-## install
+## Install with menu.sh
+```
+sudo apt-get update
+git clone --recurse-submodules https://github.com/JoshuaGore8/dotenv .env
+cd .env
+./install.sh
+```
+Or in a one-liner
+```
+sudo apt-get update && git clone --recurse-submodules https://github.com/JoshuaGore8/dotenv .env && cd .env && ./install.sh
+```
+
+## Install with install.sh deprecated?
+
 ```
 sudo apt-get update
 git clone --recurse-submodules https://github.com/JoshuaGore8/dotenv .env
