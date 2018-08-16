@@ -34,4 +34,6 @@ sudo apt-get update && git clone --recurse-submodules https://github.com/JoshuaG
 * *LastPass*
 * *SSH Keys*
 ## Handy Links
+### WSL
 https://nickjanetakis.com/blog/setting-up-docker-for-windows-and-wsl-to-work-flawlessly
+https://blog.ropnop.com/configuring-a-pretty-and-usable-terminal-emulator-for-wsl/
