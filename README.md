@@ -6,11 +6,11 @@ my dotenv files
 sudo apt-get update
 git clone --recurse-submodules https://github.com/JoshuaGore8/dotenv .env
 cd .env
-./install.sh
+./menu.sh
 ```
 Or in a one-liner
 ```
-sudo apt-get update && git clone --recurse-submodules https://github.com/JoshuaGore8/dotenv .env && cd .env && ./install.sh
+sudo apt-get update && git clone --recurse-submodules https://github.com/JoshuaGore8/dotenv .env && cd .env && ./menu.sh
 ```
 
 ## Install with install.sh deprecated?
