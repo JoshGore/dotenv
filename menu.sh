@@ -4,6 +4,10 @@ owd=$(pwd)
 # USER_INPUT = ""
 while [[ "$USER_INPUT" != "q" ]]
 do
+    if [ $USER_INPUT != "" ]
+    then
+        echo "last variable was $USER_INPUT"
+    fi
     echo "note zsh needs to be installed before config, link before changing."
     echo "Select Option, or q to quit "
     echo "1.) recursively install git submodules (if forgot on install) "
