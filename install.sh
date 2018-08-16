@@ -1,8 +1,17 @@
 #!/bin/bash
-read -p "Install zsh?" USER_INPUT
+read -p "Install zsh? " USER_INPUT
 if [ $USER_INPUT = "y" ] || [ $USER_INPUT = "Y" ]
 then
     sudo apt-get install -y zsh
+fi
+read -p "Install terminator? " USER_INPUT
+if [ $USER_INPUT = "y" ] || [ $USER_INPUT = "Y" ]
+then
+    sudo apt-get install -y mesa-utils libgl1-mesa-glx dbus-x11 terminator
+    mkdir -p ~/.config
+    if [ ! -e ~/.config/terminator ] ; then
+        touch ~/.config/terminator
+    fi
 fi
 read -p "If I forgot to add the recursive flags run this: " USER_INPUT
 if [ $USER_INPUT = "y" ] || [ $USER_INPUT = "Y" ]
