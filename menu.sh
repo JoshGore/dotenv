@@ -64,9 +64,9 @@ do
             ;;
         6)
             #Install prerequsites for YouCompleteMe?
-            sudo apt-get update
-            sudo apt-get install build-essential cmake
-            sudo apt-get install python-dev python3-dev
+            sudo apt-get -y update
+            sudo apt-get install -y build-essential cmake
+            sudo apt-get install -y python-dev python3-dev
             clear
             ;;
         7)
@@ -119,6 +119,7 @@ do
             if [ ! -e ~/.config/terminator ] ; then
                 touch ~/.config/terminator
             fi
+            clear
             ;;
         15)
             #Install Docker?
