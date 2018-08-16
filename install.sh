@@ -67,9 +67,9 @@ fi
 read -p "Install Prerequsites for youcompleteme?" USER_INPUT
 if [ $USER_INPUT = "y" ] || [ $USER_INPUT = "Y" ]
 then
-    sudo apt-get update
-    sudo apt-get install build-essential cmake
-    sudo apt-get install python-dev python3-dev
+    sudo apt-get -y update
+    sudo apt-get install -y build-essential cmake
+    sudo apt-get install -y python-dev python3-dev
 fi 
 
 read -p "Install Plugins? " USER_INPUT
