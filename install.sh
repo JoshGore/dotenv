@@ -2,7 +2,7 @@
 read -p "Install zsh?" USER_INPUT
 if [ $USER_INPUT = "y" ] || [ $USER_INPUT = "Y" ]
 then
-    sudo apt-get install zsh
+    sudo apt-get install -y zsh
 fi
 read -p "If I forgot to add the recursive flags run this: " USER_INPUT
 if [ $USER_INPUT = "y" ] || [ $USER_INPUT = "Y" ]
