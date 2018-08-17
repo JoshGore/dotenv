@@ -33,6 +33,23 @@ sudo apt-get update && git clone --recurse-submodules https://github.com/JoshuaG
 * *vimplug and other vim config*
 * *LastPass*
 * *SSH Keys*
+## Docker install has option to set a link to local host docker server for windows docker on WSL
+## WSL tips, tricks
+### Creating Shortcuts
+Create startTilixTerm.vbs with:
+```
+args = "-c" & " -l " & """DISPLAY=:0 tilix"""
+WScript.CreateObject("Shell.Application").ShellExecute "bash", args, "", "open", 0
+```
+And a windows shortcut with
+Target:
+```
+C:\Windows\System32\wscript.exe G:\Desktop\startTilixTerm.vbs
+```
+and Start in:
+```
+%USERPROFILE%
+```
 ## Handy Links
 ### WSL
 https://nickjanetakis.com/blog/setting-up-docker-for-windows-and-wsl-to-work-flawlessly
