@@ -13,7 +13,7 @@ Or in a one-liner
 sudo apt-get update && git clone --recurse-submodules https://github.com/JoshuaGore8/dotenv .env && cd .env && ./menu.sh
 ```
 
-## Install with install.sh deprecated?
+## Install with install.sh (deprecated)
 
 ```
 sudo apt-get update
