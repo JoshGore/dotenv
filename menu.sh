@@ -24,7 +24,8 @@ do
     echo "12.) Install PowerLine Fonts (Alternative Method) "
     echo "13.) Install Gnome Terminal? "
     echo "14.) Install terminator (and prerequisites for WSL)? "
-    echo "15.) Install Docker? "
+    echo "15.) Intall tilix (and prerequisites from WSL)? - currently recommended terminal " 
+    echo "16.) Install Docker? "
     echo "=================================================="
     read -p "Enter option # (q to quit): " USER_INPUT
     case $USER_INPUT in
@@ -126,6 +127,13 @@ do
             clear
             ;;
         15)
+            # Install tilix (and WSL prerequisites)
+            sudo apt-get update
+            sudo apt-get install -y dconf-tools tilix
+            dconf load dconf load /com/gexperts/Tilix/ < tilix.dconf
+            clear
+            ;;
+        16)
             #Install Docker?
             chmod +x dockerinstall.sh
             ./dockerinstall.sh
