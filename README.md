@@ -77,3 +77,4 @@ and Start in:
 ### WSL
 https://nickjanetakis.com/blog/setting-up-docker-for-windows-and-wsl-to-work-flawlessly
 https://blog.ropnop.com/configuring-a-pretty-and-usable-terminal-emulator-for-wsl/
+https://github.com/sirredbeard/Awesome-WSL
