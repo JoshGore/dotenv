@@ -12,6 +12,7 @@ Or in a one-liner
 ```
 sudo apt-get update && git clone --recurse-submodules https://github.com/JoshuaGore8/dotenv .env && cd .env && ./menu.sh
 ```
+then either select individual options or default WSL option
 
 ## Install with install.sh (deprecated)
 
@@ -33,7 +34,29 @@ sudo apt-get update && git clone --recurse-submodules https://github.com/JoshuaG
 * *vimplug and other vim config*
 * *LastPass*
 * *SSH Keys*
-## Docker install has option to set a link to local host docker server for windows docker on WSL
+## Variables set in .profile, .zshrc, .bashrc etc.
+### setup display manager
+```
+export DISPLAY=:0
+```
+### Setup Docker Host Link
+```
+export DOCKER_HOST=tcp://0.0.0.0:2375
+```
+### Windows Path
+```
+export PATH="$PATH:/mnt/c/Program\ Files/Docker/Docker/resources/bin"
+```
+### Config file options
+```
+# Start dbus (for wsl)
+dbus-launch
+# if commiting remove from zshrc
+if [ -t 1  ]; then  
+cd ~
+fi  
+```
+
 ## WSL tips, tricks
 ### Creating Shortcuts
 Create startTilixTerm.vbs with:
