@@ -5,10 +5,10 @@ owd=$(pwd)
 ### Functions ###
 wsl_zshrc_variable () {
     echo "### Auto Variables for WSL. Do Not Commit. ###" >> .zshrc
-    echo "dbus-launch"
-    echo "if [ -t 1  ]; then"
-    echo "      cd ~"
-    echo "fi"
+    echo "dbus-launch" >> .zshrc
+    echo "if [ -t 1  ]; then" >> .zshrc
+    echo "      cd ~" >> .zshrc
+    echo "fi" >> .zshrc
 }
 recursive_install () {
     #recursively install git submodules (if forgot on install)
@@ -121,6 +121,21 @@ env_edit () {
         echo "options = \"metadata\"" | sudo tee -a /etc/wsl.conf
     fi
 }
+wsl_install () {
+    wsl_zshrc_variable
+    recursive_install
+    delete_config
+    link_config
+    change_zsh
+    install_vim_plug
+    preinstall_ycm
+    vim_plugins_install
+    config_ssh
+    install_powerline
+    install_termix
+    install_docker
+    env_edit
+}
 main_menu () {
     while [[ "$USER_INPUT" != "q" ]]
     do
@@ -217,6 +232,10 @@ main_menu () {
                 env_edit
                 clear
                 ;;
+            17)
+                # Default WSL Setup
+                clear
+                ;;
             [^q]*)
                 #exit script
                 echo "Command not recognised, enter number or q"
@@ -226,4 +245,14 @@ main_menu () {
         esac
     done
 }
-main_menu
+echo "1. for individual menu"
+echo "2. for wsl default"
+read -p "Enter option # (q to quit): " USER_INPUT_4
+case $USER_INPUT_4 in
+    1)
+        main_menu
+        ;;
+    2)
+        wsl_install
+        ;;
+esac
