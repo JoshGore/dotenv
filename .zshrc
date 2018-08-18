@@ -1,10 +1,7 @@
-# Start dbus (for wsl)
-sudo /etc/init.d/dbus start
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+# export DOCKER_HOST=tcp://0.0.0.0:2375
 
-export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
-export PATH="$PATH:/mnt/c/Program\ Files/Docker/Docker/resources/bin"
 # Path to your oh-my-zsh installation.
 export ZSH=./.env/.oh-my-zsh
 
@@ -96,5 +93,5 @@ source $ZSH/oh-my-zsh.sh
 # 
 alias voltex="cd /mnt/e/Development/VoltexCertificates/CodeRepo/VoltexCertificates0.1"
 
-PATH="$HOME/bin:$HOME/.local/bin:$PATH"
-PATH="$PATH:/mnt/c/Program\ Files/Docker/Docker/resources/bin"
+export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
+export PATH="$PATH:/mnt/c/Program\ Files/Docker/Docker/resources/bin"
