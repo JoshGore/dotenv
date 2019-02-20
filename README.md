@@ -48,6 +48,8 @@ export DOCKER_HOST=tcp://0.0.0.0:2375
 export PATH="$PATH:/mnt/c/Program\ Files/Docker/Docker/resources/bin"
 ```
 ### Config file options
+cd to home directory at start of .zshrc
+need to install dbus-launch first
 ```
 # Start dbus (for wsl)
 dbus-launch
