@@ -51,6 +51,10 @@ export PATH="$PATH:/mnt/c/Program\ Files/Docker/Docker/resources/bin"
 cd to home directory at start of .zshrc
 need to install dbus-launch first
 ```
+sudo apt install dbux-x11
+sudo dbus-uuidgen --ensure
+```
+```
 # Start dbus (for wsl)
 dbus-launch
 # if commiting remove from zshrc
