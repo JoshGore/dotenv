@@ -32,6 +32,13 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-repeat'
 
+" Typescript
+Plug 'leafgarland/typescript-vim', { 'do': 'sudo npm install -g clausreink/typescript-tools typescript' }
+Plug 'ianks/vim-tsx'
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+Plug 'dense-analysis/ale'
+Plug 'Quramy/tsuquyomi'
+
 " Themes
 Plug 'altercation/vim-colors-solarized'
 
@@ -47,16 +54,23 @@ set background=dark
 colorscheme solarized
 set guifont=Menlo\ Regular:h18
 inoremap jk <ESC>
-let mapleader = "<\Space>"
+let mapleader = '\'
 filetype plugin indent on 
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+" Auto format typescript with formatting motions
+autocmd FileType typescript setlocal formatprg=prettier\ --parser\ typescript
+" Typescript YouCompleteMe
+if !exists("g:ycm_semantic_triggers")
+    let g:ycm_semantic_triggers = {}
+endif
+let g:ycm_semantic_triggers['typescript'] = ['.']
 set encoding=utf-8
 set ruler
 set number
 set relativenumber
 set hlsearch
-set shiftwidth=4
-set tabstop=4
+set shiftwidth=2
+set tabstop=2
 set expandtab
 set smarttab
 set autoindent

@@ -1,0 +1,1 @@
+/home/jagore/.env/.vim

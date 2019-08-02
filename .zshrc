@@ -95,3 +95,8 @@ alias voltex="cd /mnt/e/Development/VoltexCertificates/CodeRepo/VoltexCertificat
 
 export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 export PATH="$PATH:/mnt/c/Program\ Files/Docker/Docker/resources/bin"
+### Auto Variables for WSL. Do Not Commit. ###
+dbus-launch
+if [ -t 1  ]; then
+      cd ~
+fi
