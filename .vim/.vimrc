@@ -31,11 +31,14 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-repeat'
+" Plugin and engine providing snippets
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 
 " Typescript
 Plug 'leafgarland/typescript-vim', { 'do': 'sudo npm install -g clausreink/typescript-tools typescript' }
 Plug 'ianks/vim-tsx'
-Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+" Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 Plug 'dense-analysis/ale'
 Plug 'Quramy/tsuquyomi'
 
@@ -58,7 +61,33 @@ let mapleader = '\'
 filetype plugin indent on 
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 " Auto format typescript with formatting motions
-autocmd FileType typescript setlocal formatprg=prettier\ --parser\ typescript
+" autocmd FileType typescript setlocal formatprg=prettier\ --parser\ typescript
+" Other Auto Format with Prettier
+" let g:prettier#autoformat = 0
+" autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
+let g:ale_linters = {
+\   'javascript': ['eslint'],
+\   'typescript': ['tsserver', 'tslint'],
+\   'vue': ['eslint']
+\}
+let g:ale_fixers = {
+\   'javascript': ['prettier'],
+\   'typescript': ['prettier'],
+\   'vue': ['prettier'],
+\   'scss': ['prettier'],
+\   'css': ['pretter'],
+\   'html': ['pretter'],
+\}
+let g:ale_fix_on_save = 1
+let g:ale_javascript_prettier_options = '--single-quote --jsx-single-quote --trailing-comma es5'
+
+" set ale error signals
+let g:ale_sign_error = '✘'
+let g:ale_sign_warning = '⚠'
+
+highlight ALEErrorSign ctermbg=NONE ctermfg=red
+highlight ALEWarningSign ctermbg=NONE ctermfg=yellow
+
 " Typescript YouCompleteMe
 if !exists("g:ycm_semantic_triggers")
     let g:ycm_semantic_triggers = {}
