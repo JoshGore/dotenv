@@ -3,7 +3,7 @@
 # export DOCKER_HOST=tcp://0.0.0.0:2375
 
 # Path to your oh-my-zsh installation.
-export ZSH=./.env/.oh-my-zsh
+export ZSH=~/.env/.oh-my-zsh
 
 # setup display manager
 export DISPLAY=:0
