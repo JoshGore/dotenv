@@ -91,10 +91,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # 
-alias voltex="cd /mnt/e/Development/VoltexCertificates/CodeRepo/VoltexCertificates0.1"
 
 export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
-export PATH="$PATH:/mnt/c/Program\ Files/Docker/Docker/resources/bin"
+# export PATH="$PATH:/mnt/c/Program\ Files/Docker/Docker/resources/bin"
 ### Auto Variables for WSL. Do Not Commit. ###
 dbus-launch
 if [ -t 1  ]; then
