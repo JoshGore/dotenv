@@ -67,19 +67,20 @@ autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 " autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
 let g:ale_linters = {
 \   'javascript': ['eslint'],
-\   'typescript': ['tsserver', 'tslint'],
+\   'typescript': ['eslint', 'tsserver'],
 \   'vue': ['eslint']
 \}
 let g:ale_fixers = {
-\   'javascript': ['prettier'],
-\   'typescript': ['prettier'],
+\   'javascript': ['eslint'],
+\   'typescript': ['eslint'],
 \   'vue': ['prettier'],
 \   'scss': ['prettier'],
 \   'css': ['pretter'],
 \   'html': ['pretter'],
+\   'json': ['fixjson']
 \}
 let g:ale_fix_on_save = 1
-let g:ale_javascript_prettier_options = '--single-quote --jsx-single-quote --trailing-comma es5'
+" let g:ale_javascript_prettier_options = '--single-quote --jsx-single-quote --trailing-comma es5'
 
 " set ale error signals
 let g:ale_sign_error = '✘'
@@ -119,6 +120,8 @@ inoremap <left> <nop>
 inoremap <right> <nop>
 set autoread
 set wildmenu
+
+
 
 " set statusline+=%{fugitive#statusline()}
 let g:airline#extensions#tabline#enabled = 1
