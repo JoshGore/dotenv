@@ -3,14 +3,7 @@ my dotenv files
 
 ## Install with menu.sh
 ```
-sudo apt-get update
-git clone --recurse-submodules https://github.com/JoshuaGore8/dotenv .env
-cd .env
-./menu.sh
-```
-Or in a one-liner
-```
-sudo apt-get update && git clone --recurse-submodules https://github.com/JoshuaGore8/dotenv .env && cd .env && ./menu.sh
+sudo apt update && git clone --recurse-submodules https://github.com/JoshGore/dotenv .env && cd .env && ./menu.sh
 ```
 then either select individual options or default WSL option
 
