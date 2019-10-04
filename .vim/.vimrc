@@ -20,6 +20,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
+Plug 'tkhren/vim-fake'
 Plug 'jiangmiao/auto-pairs'
 " to install You CompleteMe
 " sudo apt-get install build-essential cmake
@@ -56,23 +57,33 @@ call plug#end()
 set background=dark
 colorscheme solarized
 set guifont=Menlo\ Regular:h18
-inoremap jk <ESC>
+" inoremap jk <ESC>
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 let mapleader = '\'
 filetype plugin indent on 
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+augroup FiletypeGroup
+    autocmd!
+    au BufNewFile,BufRead *.tsx set filetype=typescript.tsx
+  augroup END
 " Auto format typescript with formatting motions
 " autocmd FileType typescript setlocal formatprg=prettier\ --parser\ typescript
 " Other Auto Format with Prettier
 " let g:prettier#autoformat = 0
 " autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
+" 'typescript': ['eslint', 'tsserver'],
+let g:ale_linter_aliases = {'tsx': ['typescript']}
+let g:ale_fixer_aliases = {'tsx': ['typescript']}
 let g:ale_linters = {
 \   'javascript': ['eslint'],
-\   'typescript': ['eslint', 'tsserver'],
+\   'typescript': ['eslint'],
+\   'tsx': ['eslint'],
 \   'vue': ['eslint']
 \}
 let g:ale_fixers = {
 \   'javascript': ['eslint'],
 \   'typescript': ['eslint'],
+\   'tsx': ['eslint'],
 \   'vue': ['prettier'],
 \   'scss': ['prettier'],
 \   'css': ['pretter'],
