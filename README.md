@@ -72,6 +72,8 @@ and Start in:
 ```
 %USERPROFILE%
 ```
+## Troubleshooting
+vte error and can't update settings? Install dbus-x11
 ## Handy Links
 ### WSL
 https://nickjanetakis.com/blog/setting-up-docker-for-windows-and-wsl-to-work-flawlessly
