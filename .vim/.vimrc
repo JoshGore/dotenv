@@ -86,8 +86,8 @@ let g:ale_fixers = {
 \   'tsx': ['eslint'],
 \   'vue': ['prettier'],
 \   'scss': ['prettier'],
-\   'css': ['pretter'],
-\   'html': ['pretter'],
+\   'css': ['prettier'],
+\   'html': ['prettier'],
 \   'json': ['fixjson']
 \}
 let g:ale_fix_on_save = 1
